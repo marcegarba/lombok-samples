@@ -1,4 +1,4 @@
-package com.github.mgarbarino.lombok.samples.v1;
+package com.github.mgarbarino.lombok.samples.v2;
 
 import org.junit.Test;
 import org.junit.Ignore;
@@ -15,28 +15,20 @@ public class UserTest {
     final String firstName = "John";
     final String secondName = "";
     final String lastName = "Galt";
-    final User   user1 = new User();
-    final User   user2 = new User();
+    final User   user1 = new User(id, firstName, secondName, lastName);
+    final User   user2 = new User(id, firstName, secondName, lastName);
 
     @Before
     public void BeforeTests() {
-        user1.id = id;
-        user1.firstName = firstName;
-        user1.secondName = secondName;
-        user1.lastName = lastName;
-        user2.id = id;
-        user2.firstName = firstName;
-        user2.secondName = secondName;
-        user2.lastName = lastName;
     }
 
     @Test
     public void testUserData() {
         assertEquals(
-            user1.id + " " +
-            user1.firstName + " " +
-            user1.secondName + " " +
-            user1.lastName,
+            Integer.toString(user1.getId()) + " " +
+            user1.getFirstName() + " " +
+            user1.getSecondName() + " " +
+            user1.getLastName(),
             user1.getUserData()
         );
     }
