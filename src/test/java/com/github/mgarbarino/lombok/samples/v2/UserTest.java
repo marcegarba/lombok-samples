@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 
 /**
- * Test v1 class
+ * Test v2 class
  */
 public class UserTest {
 
