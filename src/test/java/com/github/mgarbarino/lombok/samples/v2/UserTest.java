@@ -48,4 +48,53 @@ public class UserTest {
         assertEquals(user1.toString(), user2.toString());
     }
 
+    @Test
+    public void testGetId() {
+        assertEquals(user1.getId(), id);
+        assertEquals(user1.getId(), user2.getId());
+    }
+
+    @Test
+    public void testGetFirstName() {
+        assertEquals(user1.getFirstName(), firstName);
+        assertEquals(user1.getFirstName(), user2.getFirstName());
+    }
+
+    @Test
+    public void testGetSecondName() {
+        assertEquals(user1.getSecondName(), secondName);
+        assertEquals(user1.getSecondName(), user2.getSecondName());
+    }
+
+    @Test
+    public void testSetId() {
+        final int changeId = id + 173;
+        user1.setId(changeId);
+        assertEquals(user1.getId(), changeId);
+        assertNotEquals(user1.getId(), user2.getId());
+    }
+
+    @Test
+    public void testSetFirstName() {
+        final String changeFirstName = firstName + " Anthony";
+        user1.setFirstName(changeFirstName);
+        assertEquals(user1.getFirstName(), changeFirstName);
+        assertNotEquals(user1.getFirstName(), user2.getFirstName());
+    }
+
+    @Test
+    public void testSetSecondName() {
+        final String changeSecondName = "Julious";
+        user1.setSecondName(changeSecondName);
+        assertEquals(user1.getSecondName(), changeSecondName);
+        assertNotEquals(user1.getSecondName(), user2.getSecondName());
+    }
+
+    @Test
+    public void testSetLastName() {
+        final String changeLastName = "Rand";
+        user1.setLastName(changeLastName);
+        assertEquals(user1.getLastName(), changeLastName);
+        assertNotEquals(user1.getLastName(), user2.getLastName());
+    }
 }
