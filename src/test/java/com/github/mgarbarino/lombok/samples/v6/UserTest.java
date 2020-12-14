@@ -1,13 +1,12 @@
-package com.github.mgarbarino.lombok.samples.v2;
+package com.github.mgarbarino.lombok.samples.v6;
 
 import org.junit.Test;
-import org.junit.Ignore;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 
 /**
- * Test v2 class
+ * Test v6 class
  */
 public class UserTest {
 
@@ -33,17 +32,21 @@ public class UserTest {
         );
     }
 
-    @Test @Ignore
+    @Test
     public void testEquals() {
         assertEquals(user1, user2);
+        assertEquals(user1, user1);
+        assertNotEquals(user1, new Object());
+        assertSame(user1, user1);
+        assertNotSame(user1, user2);
     }
 
-    @Test @Ignore
+    @Test
     public void testHashCode() {
         assertTrue(user1.hashCode() == user2.hashCode());
     }
 
-    @Test @Ignore
+    @Test
     public void testToString() {
         assertEquals(user1.toString(), user2.toString());
     }
@@ -70,37 +73,5 @@ public class UserTest {
     public void testGetLastName() {
         assertEquals(user1.getLastName(), lastName);
         assertEquals(user1.getLastName(), user2.getLastName());
-    }
-
-    @Test
-    public void testSetId() {
-        final int changeId = id + 173;
-        user1.setId(changeId);
-        assertEquals(user1.getId(), changeId);
-        assertNotEquals(user1.getId(), user2.getId());
-    }
-
-    @Test
-    public void testSetFirstName() {
-        final String changeFirstName = firstName + " Anthony";
-        user1.setFirstName(changeFirstName);
-        assertEquals(user1.getFirstName(), changeFirstName);
-        assertNotEquals(user1.getFirstName(), user2.getFirstName());
-    }
-
-    @Test
-    public void testSetSecondName() {
-        final String changeSecondName = "Julious";
-        user1.setSecondName(changeSecondName);
-        assertEquals(user1.getSecondName(), changeSecondName);
-        assertNotEquals(user1.getSecondName(), user2.getSecondName());
-    }
-
-    @Test
-    public void testSetLastName() {
-        final String changeLastName = "Rand";
-        user1.setLastName(changeLastName);
-        assertEquals(user1.getLastName(), changeLastName);
-        assertNotEquals(user1.getLastName(), user2.getLastName());
     }
 }

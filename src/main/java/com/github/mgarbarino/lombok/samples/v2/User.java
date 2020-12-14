@@ -10,7 +10,7 @@ public class User {
     private String lastName;
 
     /**
-     * Constractor.
+     * Constructor.
      * 
      * @param id         Id of the User
      * @param firstName  First name
