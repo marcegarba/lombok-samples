@@ -10,6 +10,9 @@ public class User {
     public String lastName;
 
     public String getUserData() {
-        return Integer.toString(id) + " " + firstName + " " + secondName + " " + lastName;
+        return Integer.toString(id) +
+            " " + firstName +
+            " " + secondName +
+            " " + lastName;
     }
 }

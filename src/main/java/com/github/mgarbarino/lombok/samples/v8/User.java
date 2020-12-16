@@ -19,6 +19,9 @@ public class User {
      * @return the user data
      */
     public String getUserData() {
-        return Integer.toString(id) + " " + firstName + " " + secondName + " " + lastName;
+        return Integer.toString(id) +
+            " " + firstName +
+            " " + secondName +
+            " " + lastName;
     }
 }
