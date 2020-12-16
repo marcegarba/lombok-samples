@@ -33,39 +33,21 @@ public class User {
         return Integer.toString(id) + " " + firstName + " " + secondName + " " + lastName;
     }
 
-    /**
-     * @return the id
-     */
     public int getId() {
         return id;
     }
 
-    /**
-     * @return the firstName
-     */
     public String getFirstName() {
         return firstName;
     }
 
-    /**
-     * @return the secondName
-     */
     public String getSecondName() {
         return secondName;
     }
 
-    /**
-     * @return the lastName
-     */
     public String getLastName() {
         return lastName;
     }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see java.lang.Object#hashCode()
-     */
 
     @Override
     public int hashCode() {
@@ -77,12 +59,6 @@ public class User {
         result = prime * result + ((secondName == null) ? 0 : secondName.hashCode());
         return result;
     }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see java.lang.Object#equals(java.lang.Object)
-     */
 
     @Override
     public boolean equals(Object obj) {
@@ -112,12 +88,6 @@ public class User {
             return false;
         return true;
     }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see java.lang.Object#toString()
-     */
 
     @Override
     public String toString() {

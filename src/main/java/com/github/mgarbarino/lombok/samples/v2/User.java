@@ -33,58 +33,34 @@ public class User {
         return Integer.toString(id) + " " + firstName + " " + secondName + " " + lastName;
     }
 
-    /**
-     * @return the id
-     */
     public int getId() {
         return id;
     }
 
-    /**
-     * @param id the id to set
-     */
     public void setId(int id) {
         this.id = id;
     }
 
-    /**
-     * @return the firstName
-     */
     public String getFirstName() {
         return firstName;
     }
 
-    /**
-     * @param firstName the firstName to set
-     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
-    /**
-     * @return the secondName
-     */
     public String getSecondName() {
         return secondName;
     }
 
-    /**
-     * @param secondName the secondName to set
-     */
     public void setSecondName(String secondName) {
         this.secondName = secondName;
     }
 
-    /**
-     * @return the lastName
-     */
     public String getLastName() {
         return lastName;
     }
 
-    /**
-     * @param lastName the lastName to set
-     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }

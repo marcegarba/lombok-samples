@@ -8,3 +8,6 @@
  */
 
 rootProject.name = 'lombok-samples'
+
+// reporting utility projects
+include 'code-coverage-report'

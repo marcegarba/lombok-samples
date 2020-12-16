@@ -8,6 +8,7 @@ public class User {
     public String firstName;
     public String secondName;
     public String lastName;
+
     public String getUserData() {
         return Integer.toString(id) + " " + firstName + " " + secondName + " " + lastName;
     }
