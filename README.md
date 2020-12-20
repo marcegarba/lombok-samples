@@ -1,6 +1,6 @@
 # Lombok Examples
 
-* These sample classes and unit tests demonstrate how Lombok can help
+* These sample classes and unit tests demonstrate how Lombok helps
   avoid writing boilerplate code in Java
 * The examples show a simple data, or value class, in its many incarnations
 * There are 8 varsions of this sample class, `User`
@@ -33,7 +33,7 @@ in a _user_:
 
 * This is the ugliest Java code; just an example of what **not to do**
 * Public member
-* No constructor
+* No explicit constructor
 * No override of `toString()`, `equals()`, `hashCode()`
 * Most unit tests are ignored
 
@@ -61,6 +61,7 @@ in a _user_:
 ### v5
 
 * A small, but important, difference
+* Class is final; immutability cannot be forced on inherited classes
 
 ### v6
 
@@ -74,7 +75,7 @@ in a _user_:
 ### v7
 
 * Replacing `@Data` with [@Value](https://projectlombok.org/features/Value)
-  which makes immutable classes
+  which makes immutable classes, without the need to declare them:
   * All members are final
   * Class is final as well, since immutability cannot be forced on subclasses
 
@@ -83,6 +84,7 @@ in a _user_:
 * Using the [@Builder](https://projectlombok.org/features/Builder) annotation,
   to generate a subclass which aids in building new objects based on another one
 * Added a test to show the builder working
+* This annotation follows the [Builder pattern](https://en.wikipedia.org/wiki/Builder_pattern)
 
 ## Other Notes
 
